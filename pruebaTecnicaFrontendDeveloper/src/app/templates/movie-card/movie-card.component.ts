@@ -28,4 +28,7 @@ export class MovieCardComponent implements OnInit {
       }));
   }
 
+  seeMovieDetails(id: number){
+    document.location.href = 'movie/' + id;
+  }
 }

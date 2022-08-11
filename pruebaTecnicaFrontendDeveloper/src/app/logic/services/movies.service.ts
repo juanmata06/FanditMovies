@@ -27,4 +27,13 @@ export class MoviesService {
             }
         );
     }
+
+    getCastByMovieId(id: number){return this.conexHttp.get(
+        "/3/movie/" + id + "/credits?api_key=" + globalVars.apiKey,
+        {
+            headers: new HttpHeaders(
+                { 'Content-Type': 'application/json' })
+        }
+    );
+}
 }

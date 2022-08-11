@@ -2,9 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="col-2">
-        <button type="button" class="btn btn-light" (click)="goHome()">FanditMovies</button>
+        <div class="homeButton" (click)="goHome()">
+          FanditMovies
+        </div>
       </div>
-      <div class="col-6">
+      <div class="col-5">
+        <input type="text" class="form-control" placeholder="Look for a movie">
+      </div>
+      <div class="col-5">
         <button type="button" class="btn btn-light" (click)="goMoviesList()">Movies</button>
       </div>
     </div>

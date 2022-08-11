@@ -4,7 +4,7 @@
 
 .movies{
     display: grid;
-    grid-template-columns: 17% 17% 17% 18%;
+    grid-template-columns: 17% 17% 17% 17%;
     justify-content: center;
 }
 
