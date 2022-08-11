@@ -6,11 +6,16 @@
           FanditMovies
         </div>
       </div>
-      <div class="col-5">
-        <input type="text" class="form-control" placeholder="Look for a movie">
+      <div class="col-4">
+        <form #form="ngForm">
+          <input [(ngModel)]=search type="text" name="searchForMovie" class="form-control" placeholder="Look for a movie" (keyup.enter)="sendIt()">
+        </form>
+      </div>
+      <div class="col-1">
+          <button type="button" class="btn btn-primary" (click)="sendIt()">Search</button>
       </div>
       <div class="col-5">
-        <button type="button" class="btn btn-light" (click)="goMoviesList()">Movies</button>
+        <button type="button" class="btn listMoviesButton" (click)="goMoviesList()">Now playing movies</button>
       </div>
     </div>
   </div>

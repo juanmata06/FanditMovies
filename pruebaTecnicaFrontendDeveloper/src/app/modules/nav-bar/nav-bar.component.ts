@@ -11,6 +11,8 @@ export class NavBarComponent implements OnInit {
   constructor(
   ) { }
 
+  search = "";
+  
   ngOnInit(): void {
   }
 
@@ -20,5 +22,9 @@ export class NavBarComponent implements OnInit {
 
   goMoviesList(){
     document.location.href = 'movies';
+  }
+
+  sendIt(){
+    console.log(this.search);
   }
 }
