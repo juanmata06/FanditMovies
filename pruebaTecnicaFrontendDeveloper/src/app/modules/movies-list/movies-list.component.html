@@ -1,0 +1,11 @@
+<h1 class="header">Now Playing Movies:</h1>
+
+<div class="movies">
+    <div class="movieCard" *ngFor="let movie of nowPlayingMovies">
+        <app-movie-card [id]="movie.id" style="width: 100%;"></app-movie-card>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary btn-lg btn-block loadMoreButton" (click)="loadMore()">
+    Load More ...
+</button>

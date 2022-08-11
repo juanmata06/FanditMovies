@@ -1,0 +1,19 @@
+.header{
+    margin: 20px 0 10px 30px;
+}
+
+.movies{
+    display: grid;
+    grid-template-columns: 17% 17% 17% 18%;
+    justify-content: center;
+}
+
+.movies div{
+    cursor: pointer;
+    margin: 0 30px 20px 30px;
+}
+
+.loadMoreButton{
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+}

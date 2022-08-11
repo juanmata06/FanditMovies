@@ -8,9 +8,19 @@ import { globalVars } from "src/app/logic/global/globals";
 })
 export class MoviesService {
     constructor(private conexHttp: HttpClient) { }
-    getAllContacts(): Observable<any> {
+    getNowPlayingMovies(page: number): Observable<any> {
         return this.conexHttp.get(
-            "/3/movie/now_playing?api_key=" + globalVars.apiKey,
+            "/3/movie/now_playing?api_key=" + globalVars.apiKey + "&page=" + page,
+            {
+                headers: new HttpHeaders(
+                    { 'Content-Type': 'application/json' })
+            }
+        );
+    }
+
+    getMovieDetails(id: number): Observable<any> {
+        return this.conexHttp.get(
+            "/3/movie/" + id + "?api_key=" + globalVars.apiKey,
             {
                 headers: new HttpHeaders(
                     { 'Content-Type': 'application/json' })

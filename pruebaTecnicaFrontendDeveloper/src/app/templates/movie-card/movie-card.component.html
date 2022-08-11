@@ -1,0 +1,7 @@
+<div class="card">
+    <img class="card-img-top" src="{{movie.backdrop_path}}" alt="Card image cap" width="100%" height="100%">
+    <div class="card-body">
+        <h1 class="card-title">{{movie.title}}</h1>
+        {{movie.release_date | date:'mediumDate'}}
+    </div>
+</div>
