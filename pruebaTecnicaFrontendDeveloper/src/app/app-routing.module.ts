@@ -8,7 +8,7 @@ import { ErrorPageComponent } from './modules/error-page/error-page.component';
 import { ListBySearchComponent } from './modules/list-by-search/list-by-search.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path:'',component:MoviesListComponent},
   {path:'movies',component:MoviesListComponent},
   {path:'movie/:id',component:MovieDetailsComponent},
   {path:'search/:search',component:ListBySearchComponent},

@@ -6,7 +6,7 @@ import { Movie } from 'src/app/logic/model/movie';
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
-  styleUrls: ['./movie-card.component.css'],
+  styleUrls: ['./movie-card.component.scss'],
   providers: [MoviesService]
 
 })

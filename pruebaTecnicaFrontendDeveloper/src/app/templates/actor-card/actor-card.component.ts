@@ -6,7 +6,7 @@ import { ImageService } from 'src/app/logic/services/image.service';
 @Component({
   selector: 'app-actor-card',
   templateUrl: './actor-card.component.html',
-  styleUrls: ['./actor-card.component.css'],
+  styleUrls: ['./actor-card.component.scss'],
   providers: [MoviesService]
 
 })

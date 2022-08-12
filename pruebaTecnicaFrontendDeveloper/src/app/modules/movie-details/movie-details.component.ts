@@ -8,7 +8,7 @@ import { Actor } from 'src/app/logic/model/actor';
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css'],
+  styleUrls: ['./movie-details.component.scss'],
   providers: [MoviesService]
 
 })
@@ -23,9 +23,13 @@ export class MovieDetailsComponent implements OnInit {
   movieId = "-1";
   movie: Movie = new Movie();
   cast: any = [];
+  isMobile = false;
 
 
   ngOnInit(): void {
+    if(screen.width < 414)
+    this.isMobile = true;
+
     this._activRoute.paramMap.subscribe((params) => {
       this.movieId = params.get("id") + "";
       console.log(this.movieId);

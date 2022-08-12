@@ -6,7 +6,7 @@ import { Movie } from 'src/app/logic/model/movie';
 @Component({
   selector: 'app-list-by-search',
   templateUrl: './list-by-search.component.html',
-  styleUrls: ['./list-by-search.component.css'],
+  styleUrls: ['./list-by-search.component.scss'],
   providers: [MoviesService]
 
 })
@@ -25,7 +25,6 @@ export class ListBySearchComponent implements OnInit {
   actualPage = -1;
   actualPageMovies: Array<Movie> = [];
   foundMovies: Array<Movie> = [];
-
 
   ngOnInit(): void {
     this._activRoute.paramMap.subscribe((params) => {
@@ -61,11 +60,10 @@ export class ListBySearchComponent implements OnInit {
       //We get a page
       this._moviesService.getNowPlayingMovies(i + 1).subscribe((async movies => {
         this.actualPageMovies = movies.results;
-        //console.log(this.actualPageMovies);
 
         //Search the name in that same page
         for (let movie of this.actualPageMovies) {
-          if (movie.title.includes(search)) {
+          if (movie.title.toLowerCase().includes(search.toLowerCase())) {
             this.foundMovies.push(movie);
             this.showMovies();
           }

@@ -1,7 +1,9 @@
 <div class="card" (click)="seeMovieDetails(movie.id)">
     <img class="card-img-top" src="{{movie.backdrop_path}}" alt="Card image cap" width="100%" height="100%">
-    <div class="card-body">
+    <div class="card-body" style="height: 150px;">
         <h1 class="card-title">{{movie.title}}</h1>
+    </div>
+    <div class="cardFooter">
         {{movie.release_date | date:'mediumDate'}}
     </div>
 </div>
