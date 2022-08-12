@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MovieDetailsComponent } from './modules/movie-details/movie-details.component';
 import { ErrorPageComponent } from './modules/error-page/error-page.component';
 import { ActorCardComponent } from './templates/actor-card/actor-card.component';
+import { ListBySearchComponent } from './modules/list-by-search/list-by-search.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ActorCardComponent } from './templates/actor-card/actor-card.component'
     MovieCardComponent,
     MovieDetailsComponent,
     ErrorPageComponent,
-    ActorCardComponent
+    ActorCardComponent,
+    ListBySearchComponent
   ],
   imports: [
     BrowserModule,

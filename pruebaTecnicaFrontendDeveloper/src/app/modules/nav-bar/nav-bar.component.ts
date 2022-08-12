@@ -25,6 +25,6 @@ export class NavBarComponent implements OnInit {
   }
 
   sendIt(){
-    console.log(this.search);
+    document.location.href = '/search/' + this.search;
   }
 }

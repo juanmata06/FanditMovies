@@ -1,0 +1,15 @@
+<h1 class="header header" style="font-weight: bold;">Lo que has buscado</h1>
+
+<ng-container *ngIf="loading==true">
+    <div class="container loadingContainer">
+        <div class="spinner-border text-primary spinner" role="status"></div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="loading==false">
+    <div class="movies">
+        <div class="movieCard" *ngFor="let movie of foundMovies">
+            <app-movie-card [id]="movie.id" style="width: 100%;"></app-movie-card>
+        </div>
+    </div>
+</ng-container>
